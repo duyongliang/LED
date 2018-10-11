@@ -87,7 +87,22 @@ Promises:
 */
 void UserApp1Initialize(void)
 {
- 
+    LedRateType eCurrentRate = LED_PWM_70; 
+    LedPWM(WHITE, LED_PWM_100);
+    LedPWM(PURPLE,eCurrentRate);
+    eCurrentRate=eCurrentRate-4;
+    LedPWM(BLUE,eCurrentRate);
+    eCurrentRate=eCurrentRate-4;
+    LedPWM(CYAN,eCurrentRate);
+    LedPWM(GREEN, LED_PWM_100);
+    eCurrentRate=LED_PWM_70;
+    //eCurrentRate=eCurrentRate-10;
+    LedPWM(YELLOW,eCurrentRate);
+    eCurrentRate=eCurrentRate-4;
+    LedPWM(ORANGE,eCurrentRate);
+    eCurrentRate=eCurrentRate-4;
+    LedPWM(RED,eCurrentRate);
+//    HEARTBEAT_OFF£¨£©;
   /* If good initialization, set state to Idle */
   if( 1 )
   {
@@ -136,7 +151,52 @@ State Machine Function Definitions
 /* Wait for ??? */
 static void UserApp1SM_Idle(void)
 {
-
+    static u16 u16BlinkCount = 0;
+    u16BlinkCount++;
+    if(u16BlinkCount == 100)
+    {
+     // u16BlinkCount = 0;
+      LedOn(WHITE);
+       LedOff(RED);
+    }
+    if(u16BlinkCount == 150)
+    {
+     LedOn(PURPLE);
+      LedOff(WHITE);
+    }
+    if(u16BlinkCount ==200)
+    {
+      LedOn(BLUE);
+      LedOff(PURPLE);
+    }
+    if(u16BlinkCount == 250)
+    {
+      LedOn(CYAN);
+      LedOff(BLUE);
+    }
+     if(u16BlinkCount == 300)
+    {
+      LedOn(GREEN);
+       LedOff(CYAN);
+    }
+     if(u16BlinkCount == 350)
+    {
+      LedOn(YELLOW);
+      LedOff(GREEN); 
+    }
+    if(u16BlinkCount == 400)
+    {
+      LedOn(ORANGE);
+      LedOff(YELLOW); 
+    }
+    if(u16BlinkCount == 450)
+    {
+      u16BlinkCount = 0;
+      LedOn(RED);
+      LedOff(ORANGE);
+    }
+  
+ 
 } /* end UserApp1SM_Idle() */
     
 

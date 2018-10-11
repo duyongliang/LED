@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-233304312
+Checksum=1388920917
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -44,5 +44,8 @@ mode=0
 [Breakpoints2]
 Count=0
 [Aliases]
-Count=0
-SuppressDialog=0
+A0=_ "C:\Users\li19980125\Documents\GitHub\EIEFW1_LEDBASIC\Razor_Atmel\firmware_ascii\drivers\lcd_nhd-c0220biz.c" ""
+A1=_ "C:\Users\li19980125\Documents\GitHub\EIEFW1_LEDBASIC\Razor_Atmel\firmware_common\cmsis\core_cm3.h" ""
+A2=_ "C:\Users\li19980125\Documents\GitHub\EIEFW1_LEDBASIC\Razor_Atmel\firmware_common\drivers\timer.c" ""
+Count=3
+SuppressDialog=1
